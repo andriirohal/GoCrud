@@ -1,7 +1,7 @@
 package helpers
 
 import (
-  "practice_go/cmd/models"
+  "practice_go/cmd/models" 
   "github.com/jackc/pgx/v5"
 );
 

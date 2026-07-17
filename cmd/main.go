@@ -3,7 +3,7 @@ package main
 import (
 	"practice_go/cmd/controllers"
 	"practice_go/cmd/db"
-	"github.com/gin-gonic/gin"
+  "github.com/gin-gonic/gin"
 );
 
 func main() {
