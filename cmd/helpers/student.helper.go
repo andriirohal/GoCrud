@@ -1,8 +1,8 @@
 package helpers
 
 import (
-"practice_go/cmd/models" 
-"github.com/jackc/pgx/v5"
+  "practice_go/cmd/models" 
+  "github.com/jackc/pgx/v5"
 );
 
 func ScanStudent(row pgx.Row) (models.Student, error) {

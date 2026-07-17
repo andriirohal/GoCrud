@@ -1,11 +1,11 @@
 package controllers
 
 import (
-"practice_go/cmd/models"
-"practice_go/cmd/services"
-"net/http"
-"github.com/google/uuid"
-"github.com/gin-gonic/gin"
+  "practice_go/cmd/models"
+  "practice_go/cmd/services"
+  "net/http"
+  "github.com/google/uuid"
+  "github.com/gin-gonic/gin"
 );
 
 func CreateStudentController(c *gin.Context) {
