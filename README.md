@@ -6,7 +6,7 @@ A REST API built with Go, Gin, and pgx, featuring a clean layered architecture a
 
 ## ✨ Features
 
-- Get all student
+- Get all students
 - Get student by ID
 - Create new student
 - Update student by ID
@@ -27,10 +27,10 @@ A REST API built with Go, Gin, and pgx, featuring a clean layered architecture a
 
 ```
 cmd/
-├── main.go          # entry point & routes
-├── controllers/      # HTTP handlers
-├── services/         # business logic & queries
-├── helpers/           # scanning & validation
-├── models/            # structs
-└── db/                 # DB connection pool
+├── main.go         
+├── controllers/     
+├── services/        
+├── helpers/           
+├── models/          
+└── db/                
 ```
