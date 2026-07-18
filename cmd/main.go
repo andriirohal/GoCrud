@@ -2,7 +2,7 @@ package main
 
 import (
   "practice_go/cmd/controllers"
-	"practice_go/cmd/db"
+  "practice_go/cmd/db"
   
   "log" 
   "github.com/gin-gonic/gin"
