@@ -4,7 +4,7 @@ import (
   "practice_go/cmd/controllers"
 	"practice_go/cmd/db"
   
-	"log" 
+  "log" 
   "github.com/gin-gonic/gin"
 );
 
