@@ -2,8 +2,10 @@ package main
 
 import (
   "practice_go/cmd/controllers"
-  "practice_go/cmd/db"
-  "github.com/gin-gonic/gin"
+	"practice_go/cmd/db"
+  
+	"log"
+	"github.com/gin-gonic/gin"
 );
 
 func main() {
@@ -24,9 +26,7 @@ func main() {
 
   router.PATCH("/students/:id", controllers.UpdateStudentController);
 
-  router.Run(":8080");
-
   if err := router.Run(":8080"); err != nil {
-    panic(err);
+    log.Fatal(err);
   };
 };
