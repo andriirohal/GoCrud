@@ -1,12 +1,12 @@
 package main
 
 import (
-	"practice_go/cmd/controllers"
-	"practice_go/cmd/db"
-	"practice_go/cmd/middlewares"
+  "practice_go/cmd/controllers"
+  "practice_go/cmd/db"
+  "practice_go/cmd/middlewares"
 
-	"log"
-	"github.com/gin-gonic/gin"
+  "log"
+  "github.com/gin-gonic/gin"
 );
 
 func main() {
