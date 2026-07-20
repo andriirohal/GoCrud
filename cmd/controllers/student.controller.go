@@ -1,8 +1,8 @@
 package controllers
 
 import (
-  "practice_go/cmd/models"
-  "practice_go/cmd/services"
+  "GoCrud/cmd/models"
+  "GoCrud/cmd/services"
   
   "net/http"
   "github.com/gin-gonic/gin"

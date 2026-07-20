@@ -1,9 +1,9 @@
 package main
 
 import (
-  "practice_go/cmd/controllers"
-  "practice_go/cmd/db"
-  "practice_go/cmd/middlewares"
+  "GoCrud/cmd/controllers"
+  "GoCrud/cmd/db"
+  "GoCrud/cmd/middlewares"
 
   "log"
   "github.com/gin-gonic/gin"

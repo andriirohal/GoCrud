@@ -1,4 +1,4 @@
-module practice_go
+module GoCrud
 
 go 1.25.0
 

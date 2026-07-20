@@ -1,9 +1,9 @@
 package services
 
 import (
-  "practice_go/cmd/db"
-  "practice_go/cmd/helpers"
-  "practice_go/cmd/models"
+  "GoCrud/cmd/db"
+  "GoCrud/cmd/helpers"
+  "GoCrud/cmd/models"
 
   "context"
   "errors"
