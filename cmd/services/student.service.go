@@ -1,12 +1,14 @@
 package services
 
 import (
-  "practice_go/cmd/db"
-  "practice_go/cmd/helpers"
-  "practice_go/cmd/models"
-  "context" 
-  "errors" 
-  "strings"
+	"practice_go/cmd/db"
+	"practice_go/cmd/helpers"
+	"practice_go/cmd/models"
+
+	"context"
+	"errors"
+	"strings"
+	"github.com/jackc/pgx/v5"
 );
 
 func CreateStudent(student models.Student) (models.Student, error) {
@@ -65,6 +67,10 @@ func UpdateStudent(id string, student models.UpdateStudent) (models.Student, err
   );
 
   if err != nil {
+    if errors.Is(err, pgx.ErrNoRows) {
+      return models.Student{}, errors.New("Student not found");
+    };
+
     return models.Student{}, err;
   };
 
@@ -78,6 +84,10 @@ func DeleteStudent(id string) (models.Student, error) {
   );
 
   if err != nil {
+    if errors.Is(err, pgx.ErrNoRows) {
+      return models.Student{}, errors.New("Student not found");
+    };
+
     return models.Student{}, err;
   };
 
@@ -91,6 +101,10 @@ func GetStudentById(id string) (models.Student, error) {
   ); 
 
   if err != nil {
+    if errors.Is(err, pgx.ErrNoRows) {
+      return models.Student{}, errors.New("Student not found");
+    };
+
     return models.Student{}, err;
   };
 

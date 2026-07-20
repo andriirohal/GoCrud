@@ -1,11 +1,12 @@
 package main
 
 import (
-  "practice_go/cmd/controllers"
-  "practice_go/cmd/db"
-  
-  "log" 
-  "github.com/gin-gonic/gin"
+	"practice_go/cmd/controllers"
+	"practice_go/cmd/db"
+	"practice_go/cmd/middlewares"
+
+	"log"
+	"github.com/gin-gonic/gin"
 );
 
 func main() {
@@ -18,13 +19,13 @@ func main() {
   router := gin.Default();
 
   router.GET("/students", controllers.GetAllStudentsController);
-  router.GET("/students/:id", controllers.GetStudentByIdController);
+  router.GET("/students/:id", middlewares.ValidateId, controllers.GetStudentByIdController);
 
   router.POST("/students", controllers.CreateStudentController);
 
-  router.DELETE("/students/:id", controllers.DeleteStudentController);
+  router.DELETE("/students/:id", middlewares.ValidateId, controllers.DeleteStudentController);
 
-  router.PATCH("/students/:id", controllers.UpdateStudentController);
+  router.PATCH("/students/:id", middlewares.ValidateId, controllers.UpdateStudentController);
 
   if err := router.Run(":8080"); err != nil {
     log.Fatal(err);

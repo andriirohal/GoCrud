@@ -3,8 +3,8 @@ package controllers
 import (
   "practice_go/cmd/models"
   "practice_go/cmd/services"
+  
   "net/http"
-  "github.com/google/uuid"
   "github.com/gin-gonic/gin"
 );
 
@@ -47,13 +47,6 @@ func GetStudentByIdController(c *gin.Context) {
 
 func DeleteStudentController(c *gin.Context) {
   id := c.Param("id");
-
-  if _, err := uuid.Parse(id); err != nil {
-    c.JSON(http.StatusBadRequest, gin.H {
-      "error": "Invalid student ID",
-    });
-    return;
-  };
   
   deletedStudent, err := services.DeleteStudent(id);
 
@@ -69,13 +62,6 @@ func DeleteStudentController(c *gin.Context) {
 
 func UpdateStudentController(c *gin.Context) {
   id := c.Param("id");
-
-  if _, err := uuid.Parse(id); err != nil {
-    c.JSON(http.StatusBadRequest, gin.H {
-      "error": "Invalid student ID",
-	  });
-	  return;
-  };
 
   var input models.UpdateStudent;
 
