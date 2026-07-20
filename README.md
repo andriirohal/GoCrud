@@ -104,18 +104,6 @@ go build
 
 ---
 
-## 📡 API Endpoints
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/students` | Get all students |
-| GET | `/students/:id` | Get student by ID |
-| POST | `/students` | Create new student |
-| PATCH | `/students/:id` | Update student by ID |
-| DELETE | `/students/:id` | Delete student by ID |
-
----
-
 ## 📄 Example Request
 
 ### Create Student
