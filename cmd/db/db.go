@@ -12,9 +12,11 @@ func Connect() error {
 
   pool, err := pgxpool.New(ctx, "postgres://andrii:password@localhost:5432/students");
 
-  err = pool.Ping(ctx);
-
   if err != nil {
+    return err; 
+  };
+
+  if err := pool.Ping(ctx); err != nil {
     return err;
   };
 
