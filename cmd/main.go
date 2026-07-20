@@ -7,9 +7,14 @@ import (
 
   "log"
   "github.com/gin-gonic/gin"
+  "github.com/joho/godotenv"
 );
 
 func main() {
+  if err := godotenv.Load(); err != nil {
+    log.Fatal("Error loading .env file");
+  };
+
   if err := db.Connect(); err != nil {
     panic(err);
   };
