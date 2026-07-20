@@ -6,9 +6,9 @@ import (
 	"practice_go/cmd/models"
 
   "context"
-	"errors"
-	"strings"
-	"github.com/jackc/pgx/v5"
+  "errors"
+  "strings"
+  "github.com/jackc/pgx/v5"
 );
 
 func CreateStudent(student models.Student) (models.Student, error) {
