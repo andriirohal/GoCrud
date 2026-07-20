@@ -10,7 +10,7 @@ var DB *pgxpool.Pool;
 func Connect() error {
   ctx := context.Background();
 
-  pool, err := pgxpool.New(ctx, "postgres://andrii:password@localhost:5432/students");
+  pool, err := pgxpool.New(ctx, "postgres://andrii:password@localhost:5432/students_db");
 
   if err != nil {
     return err; 
