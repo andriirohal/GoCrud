@@ -52,9 +52,9 @@ Create the students table:
 ```sql
 CREATE TABLE students (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  name TEXT NOT NULL CHECK (char_length(trim(name)) > 0),
+  name TEXT NOT NULL CHECK (length(trim(name)) > 0),
   age INTEGER NOT NULL CHECK (age BETWEEN 7 AND 100),
-  grade NUMERIC(5, 2) NOT NULL CHECK (grade BETWEEN 0 AND 100)
+  grade NUMERIC(5,2) NOT NULL CHECK (grade BETWEEN 0 AND 100)
 );
 ```
 
